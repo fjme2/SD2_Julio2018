@@ -1,0 +1,2 @@
+temperatura=33
+humedad=64

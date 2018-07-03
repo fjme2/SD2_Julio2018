@@ -1,0 +1,2 @@
+temperatura=29
+humedad=62

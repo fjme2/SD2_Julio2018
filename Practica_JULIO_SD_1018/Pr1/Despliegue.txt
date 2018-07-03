@@ -1,0 +1,8 @@
+java MyHTServer  7575 localhost 7576 5
+
+Controller:
+rmiregistry & java -cp . -Djava.security.policy=registrar.policy -Djava.rmi.server.hostname=192.168.99.150 Registro
+java java.security.policy=registrar.policy Controller 7576 localhost 7577
+
+Sonda:
+java -cp .Djava.security.policy=registrar.policy -Djava.rmi.server.hostname=192.168.99.150 RegistradorSonda 192.168.99.150 sonda1
