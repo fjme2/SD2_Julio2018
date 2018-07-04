@@ -1,0 +1,58 @@
+!SESSION 2018-07-03 10:14:16.817 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-07-03 10:15:35.238
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fran'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-07-03 11:31:14.418
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-07-03 11:31:14.435
+!MESSAGE /wse/wsdl/actions/OpenWSDLActionJSP.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-07-03 11:32:36.779
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-07-03 11:32:36.855
+!MESSAGE /wse/wsdl/actions/OpenWSDLActionJSP.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-07-03 11:34:02.341
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-07-03 11:34:02.367
+!MESSAGE /wse/wsdl/actions/OpenWSDLActionJSP.jsp
+!SESSION 2018-07-03 11:39:01.227 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-07-03 11:39:43.823
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fran'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-07-03 11:44:55.838
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-07-03 11:44:55.857
+!MESSAGE /wse/wsdl/actions/OpenWSDLActionJSP.jsp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-07-03 11:49:49.753
+!MESSAGE 
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-07-03 11:49:49.791
+!MESSAGE /wse/wsdl/actions/OpenWSDLActionJSP.jsp
