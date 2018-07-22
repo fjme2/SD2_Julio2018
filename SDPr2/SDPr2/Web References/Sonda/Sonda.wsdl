@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ax21="http://security.java/xsd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://master" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://master" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+		Please Type your service description here
+	</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema xmlns:ax22="http://security.java/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://master">
+      <xs:import namespace="http://security.java/xsd" />
+      <xs:element name="SondaNoSuchAlgorithmException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="NoSuchAlgorithmException" nillable="true" type="ax22:NoSuchAlgorithmException" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SondaNoSuchPaddingException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="NoSuchPaddingException" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SondaInvalidKeyException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="InvalidKeyException" nillable="true" type="ax22:InvalidKeyException" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SondaInvalidAlgorithmParameterException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="InvalidAlgorithmParameterException" nillable="true" type="ax22:InvalidAlgorithmParameterException" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SondaIllegalBlockSizeException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="IllegalBlockSizeException" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SondaBadPaddingException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="BadPaddingException" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="encrypt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="plainText" nillable="true" type="xs:base64Binary" />
+            <xs:element minOccurs="0" name="key" nillable="true" type="xs:base64Binary" />
+            <xs:element minOccurs="0" name="args2" nillable="true" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="encryptResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="decrypt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="encryptedText" nillable="true" type="xs:base64Binary" />
+            <xs:element minOccurs="0" name="key" nillable="true" type="xs:base64Binary" />
+            <xs:element minOccurs="0" name="args2" nillable="true" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="decryptResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setDatos">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getFecha">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getFechaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modificarTemperatura">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="temperatura" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modificarTemperaturaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modificarHumedad">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="humedad" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modificarHumedadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getNombre">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getNombreResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setValor">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="valor" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="activarActuador">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="activarActuadorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="valorTemp">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="valorTempResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="valorHum">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="valorHumResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerArchivo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="s" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EscribirLog">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="datos" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="usu" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTipo">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTipoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://security.java/xsd">
+      <xs:complexType name="GeneralSecurityException">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="NoSuchAlgorithmException">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax21:GeneralSecurityException">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="KeyException">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax21:GeneralSecurityException">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="InvalidKeyException">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax21:KeyException">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="InvalidAlgorithmParameterException">
+        <xs:complexContent mixed="false">
+          <xs:extension base="ax21:GeneralSecurityException">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="EscribirLogRequest">
+    <wsdl:part name="parameters" element="ns:EscribirLog" />
+  </wsdl:message>
+  <wsdl:message name="setDatosRequest">
+    <wsdl:part name="parameters" element="ns:setDatos" />
+  </wsdl:message>
+  <wsdl:message name="getNombreRequest">
+    <wsdl:part name="parameters" element="ns:getNombre" />
+  </wsdl:message>
+  <wsdl:message name="getNombreResponse">
+    <wsdl:part name="parameters" element="ns:getNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificarTemperaturaRequest">
+    <wsdl:part name="parameters" element="ns:modificarTemperatura" />
+  </wsdl:message>
+  <wsdl:message name="modificarTemperaturaResponse">
+    <wsdl:part name="parameters" element="ns:modificarTemperaturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFechaRequest">
+    <wsdl:part name="parameters" element="ns:getFecha" />
+  </wsdl:message>
+  <wsdl:message name="getFechaResponse">
+    <wsdl:part name="parameters" element="ns:getFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="valorTempRequest">
+    <wsdl:part name="parameters" element="ns:valorTemp" />
+  </wsdl:message>
+  <wsdl:message name="valorTempResponse">
+    <wsdl:part name="parameters" element="ns:valorTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTipoRequest">
+    <wsdl:part name="parameters" element="ns:getTipo" />
+  </wsdl:message>
+  <wsdl:message name="getTipoResponse">
+    <wsdl:part name="parameters" element="ns:getTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="encryptRequest">
+    <wsdl:part name="parameters" element="ns:encrypt" />
+  </wsdl:message>
+  <wsdl:message name="encryptResponse">
+    <wsdl:part name="parameters" element="ns:encryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="SondaNoSuchAlgorithmException">
+    <wsdl:part name="parameters" element="ns:SondaNoSuchAlgorithmException" />
+  </wsdl:message>
+  <wsdl:message name="SondaNoSuchPaddingException">
+    <wsdl:part name="parameters" element="ns:SondaNoSuchPaddingException" />
+  </wsdl:message>
+  <wsdl:message name="SondaInvalidKeyException">
+    <wsdl:part name="parameters" element="ns:SondaInvalidKeyException" />
+  </wsdl:message>
+  <wsdl:message name="SondaInvalidAlgorithmParameterException">
+    <wsdl:part name="parameters" element="ns:SondaInvalidAlgorithmParameterException" />
+  </wsdl:message>
+  <wsdl:message name="SondaIllegalBlockSizeException">
+    <wsdl:part name="parameters" element="ns:SondaIllegalBlockSizeException" />
+  </wsdl:message>
+  <wsdl:message name="SondaBadPaddingException">
+    <wsdl:part name="parameters" element="ns:SondaBadPaddingException" />
+  </wsdl:message>
+  <wsdl:message name="activarActuadorRequest">
+    <wsdl:part name="parameters" element="ns:activarActuador" />
+  </wsdl:message>
+  <wsdl:message name="activarActuadorResponse">
+    <wsdl:part name="parameters" element="ns:activarActuadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="setValorRequest">
+    <wsdl:part name="parameters" element="ns:setValor" />
+  </wsdl:message>
+  <wsdl:message name="leerArchivoRequest">
+    <wsdl:part name="parameters" element="ns:leerArchivo" />
+  </wsdl:message>
+  <wsdl:message name="decryptRequest">
+    <wsdl:part name="parameters" element="ns:decrypt" />
+  </wsdl:message>
+  <wsdl:message name="decryptResponse">
+    <wsdl:part name="parameters" element="ns:decryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificarHumedadRequest">
+    <wsdl:part name="parameters" element="ns:modificarHumedad" />
+  </wsdl:message>
+  <wsdl:message name="modificarHumedadResponse">
+    <wsdl:part name="parameters" element="ns:modificarHumedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="valorHumRequest">
+    <wsdl:part name="parameters" element="ns:valorHum" />
+  </wsdl:message>
+  <wsdl:message name="valorHumResponse">
+    <wsdl:part name="parameters" element="ns:valorHumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SondaPortType">
+    <wsdl:operation name="EscribirLog">
+      <wsdl:input wsaw:Action="urn:EscribirLog" message="ns:EscribirLogRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="setDatos">
+      <wsdl:input wsaw:Action="urn:setDatos" message="ns:setDatosRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="getNombre">
+      <wsdl:input wsaw:Action="urn:getNombre" message="ns:getNombreRequest" />
+      <wsdl:output wsaw:Action="urn:getNombreResponse" message="ns:getNombreResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modificarTemperatura">
+      <wsdl:input wsaw:Action="urn:modificarTemperatura" message="ns:modificarTemperaturaRequest" />
+      <wsdl:output wsaw:Action="urn:modificarTemperaturaResponse" message="ns:modificarTemperaturaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getFecha">
+      <wsdl:input wsaw:Action="urn:getFecha" message="ns:getFechaRequest" />
+      <wsdl:output wsaw:Action="urn:getFechaResponse" message="ns:getFechaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="valorTemp">
+      <wsdl:input wsaw:Action="urn:valorTemp" message="ns:valorTempRequest" />
+      <wsdl:output wsaw:Action="urn:valorTempResponse" message="ns:valorTempResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTipo">
+      <wsdl:input wsaw:Action="urn:getTipo" message="ns:getTipoRequest" />
+      <wsdl:output wsaw:Action="urn:getTipoResponse" message="ns:getTipoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="encrypt">
+      <wsdl:input wsaw:Action="urn:encrypt" message="ns:encryptRequest" />
+      <wsdl:output wsaw:Action="urn:encryptResponse" message="ns:encryptResponse" />
+      <wsdl:fault wsaw:Action="urn:encryptSondaNoSuchAlgorithmException" name="SondaNoSuchAlgorithmException" message="ns:SondaNoSuchAlgorithmException" />
+      <wsdl:fault wsaw:Action="urn:encryptSondaNoSuchPaddingException" name="SondaNoSuchPaddingException" message="ns:SondaNoSuchPaddingException" />
+      <wsdl:fault wsaw:Action="urn:encryptSondaInvalidKeyException" name="SondaInvalidKeyException" message="ns:SondaInvalidKeyException" />
+      <wsdl:fault wsaw:Action="urn:encryptSondaInvalidAlgorithmParameterException" name="SondaInvalidAlgorithmParameterException" message="ns:SondaInvalidAlgorithmParameterException" />
+      <wsdl:fault wsaw:Action="urn:encryptSondaIllegalBlockSizeException" name="SondaIllegalBlockSizeException" message="ns:SondaIllegalBlockSizeException" />
+      <wsdl:fault wsaw:Action="urn:encryptSondaBadPaddingException" name="SondaBadPaddingException" message="ns:SondaBadPaddingException" />
+    </wsdl:operation>
+    <wsdl:operation name="activarActuador">
+      <wsdl:input wsaw:Action="urn:activarActuador" message="ns:activarActuadorRequest" />
+      <wsdl:output wsaw:Action="urn:activarActuadorResponse" message="ns:activarActuadorResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setValor">
+      <wsdl:input wsaw:Action="urn:setValor" message="ns:setValorRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="leerArchivo">
+      <wsdl:input wsaw:Action="urn:leerArchivo" message="ns:leerArchivoRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="decrypt">
+      <wsdl:input wsaw:Action="urn:decrypt" message="ns:decryptRequest" />
+      <wsdl:output wsaw:Action="urn:decryptResponse" message="ns:decryptResponse" />
+      <wsdl:fault wsaw:Action="urn:decryptSondaNoSuchAlgorithmException" name="SondaNoSuchAlgorithmException" message="ns:SondaNoSuchAlgorithmException" />
+      <wsdl:fault wsaw:Action="urn:decryptSondaNoSuchPaddingException" name="SondaNoSuchPaddingException" message="ns:SondaNoSuchPaddingException" />
+      <wsdl:fault wsaw:Action="urn:decryptSondaInvalidKeyException" name="SondaInvalidKeyException" message="ns:SondaInvalidKeyException" />
+      <wsdl:fault wsaw:Action="urn:decryptSondaInvalidAlgorithmParameterException" name="SondaInvalidAlgorithmParameterException" message="ns:SondaInvalidAlgorithmParameterException" />
+      <wsdl:fault wsaw:Action="urn:decryptSondaIllegalBlockSizeException" name="SondaIllegalBlockSizeException" message="ns:SondaIllegalBlockSizeException" />
+      <wsdl:fault wsaw:Action="urn:decryptSondaBadPaddingException" name="SondaBadPaddingException" message="ns:SondaBadPaddingException" />
+    </wsdl:operation>
+    <wsdl:operation name="modificarHumedad">
+      <wsdl:input wsaw:Action="urn:modificarHumedad" message="ns:modificarHumedadRequest" />
+      <wsdl:output wsaw:Action="urn:modificarHumedadResponse" message="ns:modificarHumedadResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="valorHum">
+      <wsdl:input wsaw:Action="urn:valorHum" message="ns:valorHumRequest" />
+      <wsdl:output wsaw:Action="urn:valorHumResponse" message="ns:valorHumResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SondaSoap11Binding" type="ns:SondaPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EscribirLog">
+      <soap:operation soapAction="urn:EscribirLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="setDatos">
+      <soap:operation soapAction="urn:setDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getNombre">
+      <soap:operation soapAction="urn:getNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarTemperatura">
+      <soap:operation soapAction="urn:modificarTemperatura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFecha">
+      <soap:operation soapAction="urn:getFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valorTemp">
+      <soap:operation soapAction="urn:valorTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTipo">
+      <soap:operation soapAction="urn:getTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encrypt">
+      <soap:operation soapAction="urn:encrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SondaInvalidAlgorithmParameterException">
+        <soap:fault use="literal" name="SondaInvalidAlgorithmParameterException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaNoSuchAlgorithmException">
+        <soap:fault use="literal" name="SondaNoSuchAlgorithmException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaBadPaddingException">
+        <soap:fault use="literal" name="SondaBadPaddingException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaIllegalBlockSizeException">
+        <soap:fault use="literal" name="SondaIllegalBlockSizeException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaInvalidKeyException">
+        <soap:fault use="literal" name="SondaInvalidKeyException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaNoSuchPaddingException">
+        <soap:fault use="literal" name="SondaNoSuchPaddingException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activarActuador">
+      <soap:operation soapAction="urn:activarActuador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setValor">
+      <soap:operation soapAction="urn:setValor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="leerArchivo">
+      <soap:operation soapAction="urn:leerArchivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="decrypt">
+      <soap:operation soapAction="urn:decrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SondaInvalidAlgorithmParameterException">
+        <soap:fault use="literal" name="SondaInvalidAlgorithmParameterException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaNoSuchAlgorithmException">
+        <soap:fault use="literal" name="SondaNoSuchAlgorithmException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaBadPaddingException">
+        <soap:fault use="literal" name="SondaBadPaddingException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaIllegalBlockSizeException">
+        <soap:fault use="literal" name="SondaIllegalBlockSizeException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaInvalidKeyException">
+        <soap:fault use="literal" name="SondaInvalidKeyException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaNoSuchPaddingException">
+        <soap:fault use="literal" name="SondaNoSuchPaddingException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modificarHumedad">
+      <soap:operation soapAction="urn:modificarHumedad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valorHum">
+      <soap:operation soapAction="urn:valorHum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SondaSoap12Binding" type="ns:SondaPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EscribirLog">
+      <soap12:operation soapAction="urn:EscribirLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="setDatos">
+      <soap12:operation soapAction="urn:setDatos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getNombre">
+      <soap12:operation soapAction="urn:getNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarTemperatura">
+      <soap12:operation soapAction="urn:modificarTemperatura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFecha">
+      <soap12:operation soapAction="urn:getFecha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valorTemp">
+      <soap12:operation soapAction="urn:valorTemp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTipo">
+      <soap12:operation soapAction="urn:getTipo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encrypt">
+      <soap12:operation soapAction="urn:encrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SondaInvalidAlgorithmParameterException">
+        <soap12:fault use="literal" name="SondaInvalidAlgorithmParameterException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaNoSuchAlgorithmException">
+        <soap12:fault use="literal" name="SondaNoSuchAlgorithmException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaBadPaddingException">
+        <soap12:fault use="literal" name="SondaBadPaddingException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaIllegalBlockSizeException">
+        <soap12:fault use="literal" name="SondaIllegalBlockSizeException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaInvalidKeyException">
+        <soap12:fault use="literal" name="SondaInvalidKeyException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaNoSuchPaddingException">
+        <soap12:fault use="literal" name="SondaNoSuchPaddingException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activarActuador">
+      <soap12:operation soapAction="urn:activarActuador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setValor">
+      <soap12:operation soapAction="urn:setValor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="leerArchivo">
+      <soap12:operation soapAction="urn:leerArchivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="decrypt">
+      <soap12:operation soapAction="urn:decrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SondaInvalidAlgorithmParameterException">
+        <soap12:fault use="literal" name="SondaInvalidAlgorithmParameterException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaNoSuchAlgorithmException">
+        <soap12:fault use="literal" name="SondaNoSuchAlgorithmException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaBadPaddingException">
+        <soap12:fault use="literal" name="SondaBadPaddingException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaIllegalBlockSizeException">
+        <soap12:fault use="literal" name="SondaIllegalBlockSizeException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaInvalidKeyException">
+        <soap12:fault use="literal" name="SondaInvalidKeyException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SondaNoSuchPaddingException">
+        <soap12:fault use="literal" name="SondaNoSuchPaddingException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modificarHumedad">
+      <soap12:operation soapAction="urn:modificarHumedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valorHum">
+      <soap12:operation soapAction="urn:valorHum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SondaHttpBinding" type="ns:SondaPortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="EscribirLog">
+      <http:operation location="EscribirLog" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="setDatos">
+      <http:operation location="setDatos" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getNombre">
+      <http:operation location="getNombre" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarTemperatura">
+      <http:operation location="modificarTemperatura" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFecha">
+      <http:operation location="getFecha" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valorTemp">
+      <http:operation location="valorTemp" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTipo">
+      <http:operation location="getTipo" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encrypt">
+      <http:operation location="encrypt" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activarActuador">
+      <http:operation location="activarActuador" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setValor">
+      <http:operation location="setValor" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="leerArchivo">
+      <http:operation location="leerArchivo" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="decrypt">
+      <http:operation location="decrypt" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarHumedad">
+      <http:operation location="modificarHumedad" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valorHum">
+      <http:operation location="valorHum" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Sonda">
+    <wsdl:port name="SondaHttpSoap11Endpoint" binding="ns:SondaSoap11Binding">
+      <soap:address location="http://localhost:8080/SWSonda/services/Sonda.SondaHttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="SondaHttpSoap12Endpoint" binding="ns:SondaSoap12Binding">
+      <soap12:address location="http://localhost:8080/SWSonda/services/Sonda.SondaHttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="SondaHttpEndpoint" binding="ns:SondaHttpBinding">
+      <http:address location="http://localhost:8080/SWSonda/services/Sonda.SondaHttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

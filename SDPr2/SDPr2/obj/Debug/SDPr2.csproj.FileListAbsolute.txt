@@ -1,0 +1,11 @@
+C:\Users\Fran\Desktop\SDPr2\SDPr2\obj\Debug\SDPr2.csprojResolveAssemblyReference.cache
+C:\Users\Fran\Desktop\SDPr2\SDPr2\obj\Debug\SDPr2.Inicio.resources
+C:\Users\Fran\Desktop\SDPr2\SDPr2\obj\Debug\SDPr2.Peticion.resources
+C:\Users\Fran\Desktop\SDPr2\SDPr2\obj\Debug\SDPr2.Properties.Resources.resources
+C:\Users\Fran\Desktop\SDPr2\SDPr2\obj\Debug\SDPr2.csproj.GenerateResource.Cache
+C:\Users\Fran\Desktop\SDPr2\SDPr2\obj\Debug\SDPr2.csproj.CoreCompileInputs.cache
+C:\Users\Fran\Desktop\SDPr2\SDPr2\bin\Debug\SDPr2.exe.config
+C:\Users\Fran\Desktop\SDPr2\SDPr2\bin\Debug\SDPr2.exe
+C:\Users\Fran\Desktop\SDPr2\SDPr2\bin\Debug\SDPr2.pdb
+C:\Users\Fran\Desktop\SDPr2\SDPr2\obj\Debug\SDPr2.exe
+C:\Users\Fran\Desktop\SDPr2\SDPr2\obj\Debug\SDPr2.pdb
